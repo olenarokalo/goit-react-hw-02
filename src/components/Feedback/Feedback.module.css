@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 16px;
+}
+
+.list li {
+  font-size: 20px;
+  position: relative;
+}
+
+.list li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 2px;
+  background-color: #1a1a1a;
+}
